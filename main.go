@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"net/http"
+
+	"github.com/gorilla/mux"
+	"github.com/HiramZednem/go-crud-mysql/routes"
+)
+
+
 
 func main() {
-	fmt.Print("hola")
+	r := mux.NewRouter()
+
+	
+	r.HandleFunc("/", routes.HomeHandler)
+
+	http.ListenAndServe(":3000", r)
 }
