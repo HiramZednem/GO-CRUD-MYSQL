@@ -1,3 +1,4 @@
 db
-tmp/
+tmp/*
 .air.toml
+.env
